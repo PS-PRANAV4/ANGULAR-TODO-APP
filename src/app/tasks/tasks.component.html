@@ -1,0 +1,20 @@
+<app-input (addTask)="addTas($event)"  ></app-input>
+<div class="container">
+<div style="display: flex; justify-content: center; ">
+<div class="card"  style="width: 18rem; display: flex; ">
+    
+    <ul style="background-color: black;"  class="list-group list-group-flush">
+      <li class="list-group-item" *ngFor ="let ta of tasks" style="display: flex; flex-direction: row; justify-content: space-between;" >{{ta.task}} <button type="submit" mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)="delet(ta.id)"  >
+        <mat-icon>delete</mat-icon>
+      </button  ></li>
+      
+    </ul>
+
+  </div>
+</div>
+</div>
+<div style="display: flex;">
+
+<div  *ngFor="let st of star" s [ngStyle]="{'color': st.color}" (click)="starClicked(st.id)" style="font-size:large ; " >* &nbsp; &nbsp; &nbsp;</div>
+
+</div>
